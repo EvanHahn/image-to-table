@@ -15,7 +15,7 @@ module.exports = function convert (canvas) {
       const index = ((y * width) + x) * 4
       const [r, g, b] = [data[index], data[index + 1], data[index + 2]]
       const bgcolor = spectra({ r, g, b }).hex()
-      row.push(`<td bgcolor=${bgcolor}></td>`)
+      row.push(`<td bgcolor=${bgcolor} />`)
     }
     row.push('</tr>')
     result.push(...row)
