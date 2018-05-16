@@ -30,8 +30,6 @@ test('converts an image', async () => {
   const $td = $('table td')
   expect($td).toHaveLength(9)
 
-  console.log(result)
-
   ;[
     'black',
     'white',
