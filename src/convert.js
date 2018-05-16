@@ -6,7 +6,7 @@ module.exports = function convert (canvas) {
   const {data} = ctx.getImageData(0, 0, width, height)
 
   const result = [
-    '<table border=0 cellspacing=0 cellpadding=0>'
+    `<table width=${width} height=${height} border=0 cellspacing=0 cellpadding=0>`
   ]
 
   for (let y = 0; y < height; y++) {

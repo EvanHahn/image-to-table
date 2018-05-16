@@ -21,6 +21,8 @@ test('converts an image', async () => {
   expect($table.attr('border')).toEqual('0')
   expect($table.attr('cellspacing')).toEqual('0')
   expect($table.attr('cellpadding')).toEqual('0')
+  expect($table.attr('width')).toEqual('3')
+  expect($table.attr('height')).toEqual('3')
 
   const $tr = $('table tr')
   expect($tr).toHaveLength(3)
