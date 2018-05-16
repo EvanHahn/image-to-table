@@ -8,8 +8,7 @@
     "development": "webpack-dev-server"
   },
   "dependencies": {
-    "canvas": "^2.0.0-alpha.12",
-    "spectra": "^0.2.3"
+    "canvas": "^2.0.0-alpha.12"
   },
   "standard": {
     "ignore": [
@@ -23,6 +22,7 @@
   "devDependencies": {
     "cheerio": "^1.0.0-rc.2",
     "jest": "^22.4.3",
+    "spectra": "^0.2.3",
     "standard": "^11.0.1"
   }
 }
