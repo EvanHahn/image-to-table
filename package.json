@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "scripts": {
+    "pretest": "standard --fix",
+    "test": "jest",
+    "test:watch": "jest --watch --notify",
+    "build": "webpack",
+    "development": "webpack-dev-server"
+  },
+  "dependencies": {
+    "canvas": "^2.0.0-alpha.12",
+    "spectra": "^0.2.3"
+  },
+  "standard": {
+    "ignore": [
+      "dist"
+    ],
+    "globals": [
+      "test",
+      "expect"
+    ]
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "jest": "^22.4.3",
+    "standard": "^11.0.1"
+  }
+}
