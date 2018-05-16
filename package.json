@@ -3,17 +3,12 @@
   "scripts": {
     "pretest": "standard --fix",
     "test": "jest",
-    "test:watch": "jest --watch --notify",
-    "build": "webpack",
-    "development": "webpack-dev-server"
+    "test:watch": "jest --watch --notify"
   },
   "dependencies": {
     "canvas": "^2.0.0-alpha.12"
   },
   "standard": {
-    "ignore": [
-      "dist"
-    ],
     "globals": [
       "test",
       "expect"
