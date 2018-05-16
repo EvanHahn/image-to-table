@@ -25,9 +25,22 @@ module.exports = function convert (canvas) {
 }
 
 function hex (...rgbArray) {
-  return rgbArray.reduce((result, color) => {
-    let hexed = color.toString(16)
-    if (hexed.length === 1) { hexed = '0' + hexed }
-    return result + hexed
-  }, '#')
+  const hexed = rgbArray.map(color => color.toString(16))
+  const canUseShorthand = hexed.every((value, index) => {
+    const originalValue = rgbArray[index]
+    if ((value.length === 1) && (originalValue <= 9)) {
+      return true
+    } else {
+      return value[0] === value[1]
+    }
+  })
+  const result = ['#']
+  if (canUseShorthand) {
+    result.push(...hexed.map(value => value[0]))
+  } else {
+    result.push(...hexed.map(value => (
+      (value.length === 1) ? ('0' + value) : value
+    )))
+  }
+  return result.join('')
 }
