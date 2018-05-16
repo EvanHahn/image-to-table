@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+const convert = require('../src/convert')
+const { createCanvas, loadImage } = require('canvas')
+
+async function main (imagePath) {
+  const image = await loadImage(imagePath)
+  const canvas = createCanvas(image.width, image.height)
+  const ctx = canvas.getContext('2d')
+  ctx.drawImage(image, 0, 0)
+
+  console.log(convert(canvas))
+}
+
+main(process.argv[2])
